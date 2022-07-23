@@ -1,0 +1,170 @@
+:root{
+   --Mobile: 375px;
+   --Desktop: 1440px;
+
+   --GrayishBlue: hsl(237, 18%, 59%);
+   --SoftRed: hsl(345, 95%, 68%);
+   --White: hsl(0, 0%, 100%);
+   --Darkblue: hsl(236, 21%, 26%);
+   --Verydark: hsl(235, 16%, 14%);
+   --Veryblue2: hsl(234, 17%, 12%);
+   --fontFamily:'Red Hat Text', sans-serif;;
+   --FontSize: 14px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+
+*{ 
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+
+ body{
+     font-family: var(--fontFamily);
+     font-size: var(--FontSize);
+     width: 100%;
+     height: 100vh; 
+ }
+
+ .main{
+     z-index: 999;
+     background: hsl(235, 16%, 14%) url(images/bg-stars.svg) center no-repeat;
+     width: 100%;
+     height: inherit;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;    
+ }
+
+ .header{
+     color: var(--White);
+     text-transform: uppercase;
+     letter-spacing: 8px;
+     margin: 5%;
+     padding: 0 10px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;  
+ }
+
+.content{
+    color: var(--GrayishBlue);
+    text-align: center;
+    display: flex;
+    margin: 2rem 20rem;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;  
+}
+
+.content h3{
+    
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: smaller;
+    margin-top: 1.5rem;
+
+ }
+
+.content p{
+   padding: 20px;
+   margin: 30px;
+   color: var(--SoftRed);
+   background: linear-gradient(rgb(36, 37, 49) 50%,
+   hsl(238, 24%, 23%)50%);
+   border-radius: 5px;
+   font-size: 50px;
+   box-shadow: 5px 15px 10px -7px #000000; 
+}
+
+
+.footer{
+    width: 100%;
+    height: 40%;
+    margin-top: 10rem;
+    background: url(images/pattern-hills.svg) center no-repeat;
+    background-size: 100% 100%;
+    z-index: 1;
+    color: var(--GrayishBlue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+
+.icon-social{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  
+}
+
+.icon-social li {
+    text-decoration:none;
+    list-style: none;
+    cursor: pointer;
+}
+
+ion-icon{
+    width: 50px;
+    height: 50px;
+    padding: 20px;
+}
+ion-icon:hover{
+    color: var(--SoftRed);
+    transition: 0.2s;
+    opacity: 0.7;
+}
+
+
+@media(max-width: 750px) {
+
+    .header{
+       margin: 5%;
+       padding-top: 4rem;
+       text-align: center;
+       letter-spacing: 4px;
+    }
+
+    .content{
+      margin: 4rem;
+      text-align: center;  
+    }
+
+    .content p{
+        color: var(--GrayishBlue);
+        text-align: center;
+        padding: 10px;
+        font-size: 28px;
+        margin: 5px;
+        color: var(--SoftRed);
+    }
+   
+    .content h2{
+        font-size: 12px;
+        padding:0 5px ;
+        text-transform: uppercase;
+    }
+    .card{
+        margin: 8px;
+    }
+    .footer{
+        margin-top: 2rem;
+        height: 20%;
+    }
+    ion-icon{
+        padding: 5px;
+        width: 20px;
+        height: 20px;
+        margin-top: 50px;
+    }
+}
